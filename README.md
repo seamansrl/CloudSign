@@ -16,18 +16,18 @@ También es posible descargar los programas compilados desde https://www.proyect
 - 1x ESP32-CAM Wrover Module
 - 1x Arduino Nano v1/v2
 - 1x Tira LED Neopixel x8 leds
-- 1x Rele
+- 1x Micro Rele
 - 1x Pirometro Optris (Opcional)
-- 1x Pantalla LCD DotMatrix 2 lineas con adaptador I2C
-- 1x Beeper
+- 1x Display Lcd 16x2 Backlight Azul 1602 Hd44780 Arduino Pic con adaptador I2C
+- 1x Beeper pasivo
 - 1x Memoria microSD (Formateada para FAT32)
 - 1x Transformador 7,5V / 2A
-- 1x Pigtail antena ESP32
+- 1x Cable Pigtail Antena Conector Hembra Ipx Ufl Ard Pic para ESP32-cam
 - 1x Antena 5dBi
-- 1x Conector RJ45 para chasis
+- 1x Conector Rj45 Chasis Panel Ne8fdv Ethercon Vertical
 - 1x Sensor Ultrasonico Hc-sr04 (Opcional)
 - Cables
-- 2x 
+- 2x Pin Hembra Largo Female Long Pin Header 1x8p Paso (Aca se conecta la ESP32-CAM)
 
 
 # Cargar el codigo en la ESP32-CAM
