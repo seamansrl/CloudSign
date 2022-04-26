@@ -1,8 +1,34 @@
-# PROYECTO HORUS: Demo en Arduino C para ESP32-CAM
+# PROYECTO HORUS: CloudSign
 
-Código demo en C de ARDUINO para el consumo de la API de reconocimiento (Proyecto Horus)
+CloudSign es el sistema de control biométrico para fichado de personal, apertura de puertas o control termino de SeaMan SRL. 
 
-El Proyecto Horus consiste en una API REST que permite de forma simple identificar imagenes via redes neuronales.
+Pensado para ser de bajo costo y alta prestación, CloudSign está basada en tecnología Open hardware como la Arduino Nano y la ESP32-cam.
+
+Funciona gracias a las API en Cloud de https://www.ProyectoHorus.com.ar pero puede ser usado también en modo Stand Alone.
+
+ En el siguiente repositorio podrá encontrar todas las fuentes tanto para la Arduino como para la ESP32-cam como asi también los PCB en donde ambas placas se conectan, el manual de usuario, el esquema de chasis y los fuentes del administrador en red de nuestra cerradura biométrica.
+
+También es posible descargar los programas compilados desde https://www.proyectohorus.com.ar/CloudSign como también adquirir el producto en caja cerrada.
+
+
+# Elementos requeridos
+
+- 1x ESP32-CAM Wrover Module
+- 1x Arduino Nano v1/v2
+- 1x Tira LED Neopixel x8 leds
+- 1x Rele
+- 1x Pirometro Optris (Opcional)
+- 1x Pantalla LCD DotMatrix 2 lineas con adaptador I2C
+- 1x Beeper
+- 1x Memoria microSD (Formateada para FAT32)
+- 1x Transformador 7,5V / 2A
+- 1x Pigtail antena ESP32
+- 1x Antena 5dBi
+- 1x Conector RJ45 para chasis
+- 1x Sensor Ultrasonico Hc-sr04 (Opcional)
+- Cables
+- 2x 
+
 
 # Cargar el codigo en la ESP32-CAM
 
@@ -18,35 +44,14 @@ La configuración del entorno arduino para la carga sera:
 Nota: Si hay problemas para subir el codigo a la placa y todo parace corresponder correctamente debera probar invirtiendo el RX y el TX de la placa TTL.
 
 
-# Dentro de las funciones de la API podemos encontrar
+# Dentro de las funciones de la API para CloudSign podemos encontrar
 
 El Proyecto Horus consiste en una API REST que permite de forma simple identificar imágenes vía redes neuronales.
 
 - FACE ID
-- OBJECT DETECTION
-- QR DECODER
-- ID DECODER
-- APLR (AUTOMATIC PLATE LICENSE RECOGNITION)
-
-Administra la API usando la app instalable 
-https://www.proyectohorus.com.ar/descargas/windows/admin.zip
-
-Administra la API usando nuestro administrador web 
-https://www.proyectohorus.com.ar/administrador
+- FACE MASK
 
 Administra la API directo desde tu back usando la documentación en Swagger https://www.proyectohorus.com.ar/Documentacion/Administrador.json
-
-La URL a usar en el codigo de ejemplo es:
-https://server1.proyectohorus.com.ar
-
-El usuario, Password y Perfil se obtienen en esta primer etapa desde el software descargable.
-
-Ejemplo de como usar el administrador aca:
-
-https://www.youtube.com/watch?v=pf7yy0KpRks&t=3s
-
-# Contactanos en:
-https://www.linkedin.com/company/35599193/admin/
 
 # Seguime en:
 https://www.linkedin.com/in/fernando-p-maniglia/
