@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EmguCV.3.1.0.1\build\EmguCV.props" Condition="Exists('packages\EmguCV.3.1.0.1\build\EmguCV.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95D2E51F-55C8-4AED-8648-2593EA4E3F10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Horus</RootNamespace>
+    <AssemblyName>Cloud Sign</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Personales\temp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.proyectohorus.com.ar/cloudsign/descargas/windows/</InstallUrl>
+    <UpdateUrl>http://www.proyectohorus.com.ar/cloudsign/descargas/windows/</UpdateUrl>
+    <SupportUrl>http://www.proyectohorus.com.ar/CloudSign</SupportUrl>
+    <ProductName>CloudSign</ProductName>
+    <PublisherName>SeaMan SRL</PublisherName>
+    <SuiteName>Proyecto Horus</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>43</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>730D6E9672FBFD86DAE58555E8BA59DD73C5F3FE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Proyecto Horus_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Horus.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.3.2\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activate.Designer.cs">
+      <DependentUpon>Activate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Camaras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Camaras.designer.cs">
+      <DependentUpon>Camaras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigDevice.designer.cs">
+      <DependentUpon>ConfigDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datalog.designer.cs">
+      <DependentUpon>Datalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalView.Designer.cs">
+      <DependentUpon>LocalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyAccount.Designer.cs">
+      <DependentUpon>ModifyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyDetection.Designer.cs">
+      <DependentUpon>ModifyDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDetection.Designer.cs">
+      <DependentUpon>AddDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyProfile.Designer.cs">
+      <DependentUpon>ModifyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProfile.Designer.cs">
+      <DependentUpon>AddProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones.Designer.cs">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detecciones.Designer.cs">
+      <DependentUpon>Detecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentas.Designer.cs">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarClave.Designer.cs">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaceUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaceUpload.Designer.cs">
+      <DependentUpon>FaceUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Landing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Landing.Designer.cs">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graficas.cs" />
+    <Compile Include="Perfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfiles.Designer.cs">
+      <DependentUpon>Perfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccount.Designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scaner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scaner.designer.cs">
+      <DependentUpon>Scaner.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Activate.resx">
+      <DependentUpon>Activate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Camaras.resx">
+      <DependentUpon>Camaras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigDevice.resx">
+      <DependentUpon>ConfigDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datalog.resx">
+      <DependentUpon>Datalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalView.resx">
+      <DependentUpon>LocalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyAccount.resx">
+      <DependentUpon>ModifyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyDetection.resx">
+      <DependentUpon>ModifyDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDetection.resx">
+      <DependentUpon>AddDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyProfile.resx">
+      <DependentUpon>ModifyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProfile.resx">
+      <DependentUpon>AddProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones.resx">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detecciones.resx">
+      <DependentUpon>Detecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas.resx">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarClave.resx">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaceUpload.resx">
+      <DependentUpon>FaceUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Landing.resx">
+      <DependentUpon>Landing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfiles.resx">
+      <DependentUpon>Perfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scaner.resx">
+      <DependentUpon>Scaner.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Proyecto Horus_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Animated01.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\CUENTAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\USUARIOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\PERFILES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\DETECCIONES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+    <None Include="logo_dynamic.png" />
+    <None Include="Resources\ayuda.png" />
+    <Content Include="x64\cvextern.dll" />
+    <Content Include="x64\opencv_ffmpeg310_64.dll" />
+    <Content Include="x86\cvextern.dll" />
+    <Content Include="x86\opencv_ffmpeg310.dll" />
+    <None Include="Resources\Wallpaper.jpg" />
+    <None Include="Resources\Detecciones.jpg" />
+    <None Include="Resources\Perfiles.jpg" />
+    <None Include="Resources\Edificios.jpg" />
+    <None Include="Add.jpg" />
+    <None Include="Add.png" />
+    <None Include="Loading.gif" />
+    <Content Include="icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EmguCV.3.1.0.1\build\EmguCV.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EmguCV.3.1.0.1\build\EmguCV.props'))" />
+    <Error Condition="!Exists('packages\EmguCV.3.1.0.1\build\EmguCV.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EmguCV.3.1.0.1\build\EmguCV.targets'))" />
+  </Target>
+  <Import Project="packages\EmguCV.3.1.0.1\build\EmguCV.targets" Condition="Exists('packages\EmguCV.3.1.0.1\build\EmguCV.targets')" />
+</Project>

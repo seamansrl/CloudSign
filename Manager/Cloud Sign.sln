@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloud Sign", "Cloud Sign.csproj", "{95D2E51F-55C8-4AED-8648-2593EA4E3F10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95D2E51F-55C8-4AED-8648-2593EA4E3F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D2E51F-55C8-4AED-8648-2593EA4E3F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D2E51F-55C8-4AED-8648-2593EA4E3F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D2E51F-55C8-4AED-8648-2593EA4E3F10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5A5B064-EA13-4BFF-88B9-02B9A7799D3B}
+	EndGlobalSection
+EndGlobal
