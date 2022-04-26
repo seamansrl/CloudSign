@@ -29,6 +29,11 @@ También es posible descargar los programas compilados desde https://www.proyect
 - Cables
 - 2x Pin Hembra Largo Female Long Pin Header 1x8p Paso (Aca se conecta la ESP32-CAM)
 
+![CloudSign](img1.jpg)
+
+![CloudSign](img2.jpg)
+
+![CloudSign](img3.jpg)
 
 # Cargar el codigo en la ESP32-CAM
 
