@@ -40,7 +40,11 @@ Instalaremos cada componente en la PCB según se muestra en las siguientes imág
 
 ![CloudSign](img3.jpg)
 
-Nota: Los pibes de conexión a los elementos externos (LCD, Neo Pixel, Beeper, Etc) van del lados de las pistas. Si bien es más complicado soldar pines de esta forma, hacerlo así nos ahorra tener que hacer una PCB de dos capas ahorrando tiempo y dinero.
+Nota: Los pines de conexión a los elementos externos (LCD, Neo Pixel, Beeper, Etc) van del lados de las pistas. Si bien es más complicado soldar pines de esta forma, hacerlo así nos ahorra tener que hacer una PCB de dos capas ahorrando tiempo y dinero.
+
+Otro detalle importante es notar que la ESP32-Cam está superpuesta a la Arduino, por tanto deberemos quitarle a esta última los 6 pines que sobresalen en la punta contraria al Conector USB del lado del Microcontrolador. A su vez debemos soldar los (Pin Hembra Largo Female Long Pin Header 1x8p Paso) a la PCB y poner la ESP32-Cam en ellos para darle altura.
+
+Último detalle: si pensamos usar un gabinete metálico, deberemos usar una antena externa, pero ojo por que las ESP32-Cam tienen una resistencia que sirve para seleccionar entre el conector a pigtail y la antena integrada, es una resistencia SMD muy muy pequeña que deberemos cambiar de posición, ver este vídeo para más información (https://m.youtube.com/watch?v=ckPu18lrBkE)
 
 Vamos a ver 5 conjuntos de pines para conexiones exteriores:
 
