@@ -85,8 +85,9 @@ Para una rápida y simple implementación y posterior gestión de los usuarios h
 ![Conexion entre TTL y ESP32-Cam](alta_biometrica.jpg)
 
 # Códigos avanzados de configuración:
+
 Además de las variables generadas automáticamente por el  administrador, tal como se vio en las páginas: 22 a 26 del manual de usuario (Manual.pdf), CloudSign cuenta con parámetros avanzados que le permitirán ajustar a los aspectos internos para asi adaptar al dispositivo a la mayor cantidad de escenarios posibles.
-Antes de empezar a enumerar cada parámetro y el tipo de valor este toma, hay que destacar que estos van en el mismo archivo .json de la configuración como elementos adicionales y siempre se deberán escribir en minúsculas:
+Antes de empezar a enumerar cada parámetro y el tipo de valor este toma, hay que destacar que estos van en el mismo archivo .json de la configuración como elementos adicionales y siempre se deberán escribir en minúsculas (Estos valores se encuentras en el directorio raiz de la microSD bajo el nombre de "config.json"):
 
 - ssid: (Tipo String) Define el nombre de la red WiFi donde se debe conectar CloudSign para poder traficar datos hacia el servidor Horus.
 
@@ -270,8 +271,7 @@ dispositivo en una red local.
 
 - clock_offset: (Tipo integral) Indica la cantidad de segundos que se le 
 debara sumar o restar a la hora del meridiano 0 para ajustar la hora a 
-la hora local. Ejemplo: para Bs As es -3hs o sea que deberemos poner 
-10800.
+la hora local. Ejemplo: para Bs As es -3hs o sea que deberemos poner 10800.
 
 - block_diff: (Tipo flotante) forma parte del algoritmo de detección de 
 movimiento.
