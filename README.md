@@ -405,6 +405,9 @@ La configuración del entorno arduino para la carga sera:
 
 Nota: Si hay problemas para subir el codigo a la placa y todo parace corresponder correctamente debera probar invirtiendo el RX y el TX de la placa TTL.
 
+# Modelo terminado
+
+![Configuracion en entorno Arduino](Modelo_Terminado.jpg)
 
 # Dentro de las funciones de la API para CloudSign podemos encontrar
 
