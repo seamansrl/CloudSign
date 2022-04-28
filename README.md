@@ -29,11 +29,34 @@ También es posible descargar los programas compilados desde https://www.proyect
 - Cables
 - 2x Pin Hembra Largo Female Long Pin Header 1x8p Paso (Aca se conecta la ESP32-CAM)
 
+# Primeros pasos
+
+Antes de empezar debemos verificar tener todos los componente, incluida nuestra PCB y el programador para la ESP32-Cam (ver Cargar el codigo en la ESP32-CAM).
+Instalaremos cada componente en la PCB según se muestra en las siguientes imágenes:  
+
 ![CloudSign](img1.jpg)
 
 ![CloudSign](img2.jpg)
 
 ![CloudSign](img3.jpg)
+
+Nota: Los pibes de conexión a los elementos externos (LCD, Neo Pixel, Beeper, Etc) van del lados de las pistas. Si bien es más complicado soldar pines de esta forma, hacerlo así nos ahorra tener que hacer una PCB de dos capas ahorrando tiempo y dinero.
+
+Vamos a ver 5 conjuntos de pines para conexiones exteriores:
+
+- RS232 (3 pines Negativo TX y RX)
+- Tira Neopixel (3 pines Negativo, Positivo y Data)
+- LCD (4 Pines Negativo, Positivo, Data y Clock)
+- Beeper (2 pines Negativo y señal)
+- Rele (3 Pines Negativo, Positivo y Trigger)
+- Pitometro (3 Pines Negativo, Positivo y Señal analógica)
+- Ultrasónico (4 Pines Negativo, Positivo, Trigger y Retorno)
+
+# Comunicación entre placas.
+
+Si bien es verdad que podría hacerse todos con solo la ESP32-Cam, vemos que está está un tanto limitada en pines de salida como así también tiene un serio problema con su pin Analógico-Digital el cual tiende a ser bastante inseparable, es por esto que acudimos a una Arduino Nano como soporte para el control de todos los elementos externos dejando a la ESP32-Cam con las funciones de red y calculo. Podríamos decir que la Arduino hace de placa IDE mientras que la ESP32-Cam ee el Mother, memoria y el CPU.
+Para que ambas placas compartan información, usamos los pines RS323 mandando mensajes cortos separados por pipe (|) en donde tenernos el comando seguido de los parámetros. La comunicación si bien es bi-direccional en el sentido de que ambas placas se comparten datos, el proceso es tipo BroadCast ya que no se espera confirmación de recepción. 
+Es importante no cambiar la velocidad de comunicación entre las placas, ya que la codificada es la velocidad nativa, velocidades menores o mayores devendrán en errores.
 
 # Cargar el codigo en la ESP32-CAM
 
