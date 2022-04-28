@@ -78,6 +78,12 @@ CloudSign trabaja en un esquema denominado FOG en donde parte de los procesos se
 
 De forma local se realiza un disparo inicial usando Face Detection, Motion Detection o Temperature Detection, cuando alguno de estos gatillos se activa, la ESP32-CAM obtiene una imagen de la persona que esta frente a la cámara y la envía al servidor de Proyecto Horus, quien será el encargado de analizar la imagen en búsqueda de la coincidencia buscada: Uso de tapabocas, Identificación de rostro, Uso de elementos de seguridad, etc. Si la respuesta es positiva Horus podrá informar sobre el rango horario habilitado para la persona o si esta se encuentra bloqueada por algún motivo como asi también puede devolver una URL a donde se deberá consultar sobre el perfil de acceso del usuario en caso de que se quiera usar un sistema de autenticación externo.
 
+# Gestion de usuarios
+
+Para una rápida y simple implementación y posterior gestión de los usuarios habilitados, sus horarios, como asi también la configuración de la ESP32-CAM y el análisis en tiempo real de lo que esta ocurriendo en el dispositivo biométrico, es que se implemento un gestor de usuarios el cual tiene sus fuentes en la carpeta “Manager” o se puede bajar ya compilado desde (https://www.proyectohorus.com.ar/cloudsign/descargas/windows/setup.zip). 
+
+![Conexion entre TTL y ESP32-Cam](alta_biometrica.jpg)
+
 # Cargar el codigo en la ESP32-CAM
 
 Para copiar el codigo a la ESP32-Cam se requiere de un adaptador USB-TTL el cual ira conectado de la siguiente manera:
