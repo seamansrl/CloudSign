@@ -50,7 +50,9 @@ Otro detalle importante es notar que la ESP32-Cam está superpuesta a la Arduino
 
 Último detalle: si pensamos usar un gabinete metálico, deberemos usar una antena externa, pero ojo por que las ESP32-Cam tienen una resistencia que sirve para seleccionar entre el conector a pigtail y la antena integrada. Es una resistencia SMD muy muy pequeña que deberemos cambiar de posición, ver este vídeo para más información (https://m.youtube.com/watch?v=ckPu18lrBkE)
 
-Vamos a ver 5 conjuntos de pines para conexiones exteriores:
+# Perisfericos.
+
+Vamos a ver 7 conjuntos de pines para conexiones exteriores:
 
 - RS232 (3 pines Negativo TX y RX)
 - Tira Neopixel (3 pines Negativo, Positivo y Data)
