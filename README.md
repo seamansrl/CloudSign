@@ -8,7 +8,7 @@ Funciona gracias a las API en Cloud de https://www.ProyectoHorus.com.ar pero pue
 
  En el siguiente repositorio podrá encontrar todas las fuentes tanto para la Arduino como para la ESP32-cam como asi también los PCB en donde ambas placas se conectan, el manual de usuario, el esquema de chasis y los fuentes del administrador en red de nuestra cerradura biométrica.
 
-También es posible descargar los programas compilados desde https://www.proyectohorus.com.ar/CloudSign como o adquirir el producto en caja cerrada.
+También es posible descargar los programas compilados desde https://www.proyectohorus.com.ar/CloudSign como adquirir el producto en caja cerrada.
 
 
 # Elementos requeridos
