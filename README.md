@@ -44,7 +44,7 @@ Nota: Los pines de conexión a los elementos externos (LCD, Neo Pixel, Beeper, E
 
 Otro detalle importante es notar que la ESP32-Cam está superpuesta a la Arduino, por tanto deberemos quitarle a esta última los 6 pines que sobresalen en la punta contraria al Conector USB del lado del Microcontrolador. A su vez debemos soldar los (Pin Hembra Largo Female Long Pin Header 1x8p Paso) a la PCB y poner la ESP32-Cam en ellos para darle altura.
 
-Último detalle: si pensamos usar un gabinete metálico, deberemos usar una antena externa, pero ojo por que las ESP32-Cam tienen una resistencia que sirve para seleccionar entre el conector a pigtail y la antena integrada, es una resistencia SMD muy muy pequeña que deberemos cambiar de posición, ver este vídeo para más información (https://m.youtube.com/watch?v=ckPu18lrBkE)
+Último detalle: si pensamos usar un gabinete metálico, deberemos usar una antena externa, pero ojo por que las ESP32-Cam tienen una resistencia que sirve para seleccionar entre el conector a pigtail y la antena integrada. Es una resistencia SMD muy muy pequeña que deberemos cambiar de posición, ver este vídeo para más información (https://m.youtube.com/watch?v=ckPu18lrBkE)
 
 Vamos a ver 5 conjuntos de pines para conexiones exteriores:
 
@@ -58,7 +58,7 @@ Vamos a ver 5 conjuntos de pines para conexiones exteriores:
 
 # Comunicación entre placas.
 
-Si bien es verdad que podría hacerse todos con solo la ESP32-Cam, vemos que está está un tanto limitada en pines de salida como así también tiene un serio problema con su pin Analógico-Digital el cual tiende a ser bastante inseparable, es por esto que acudimos a una Arduino Nano como soporte para el control de todos los elementos externos dejando a la ESP32-Cam con las funciones de red y calculo. Podríamos decir que la Arduino hace de placa IDE mientras que la ESP32-Cam ee el Mother, memoria y el CPU.
+Si bien es verdad que podría hacerse todos con solo la ESP32-Cam, vemos que ésta está un tanto limitada en pines de salida como así también tiene un serio problema con su pin Analógico-Digital el cual tiende a ser bastante inseparable, es por esto que acudimos a una Arduino Nano como soporte para el control de todos los elementos externos dejando a la ESP32-Cam con las funciones de red y calculo. Podríamos decir que la Arduino hace de placa IDE mientras que la ESP32-Cam ee el Mother, memoria y el CPU.
 Para que ambas placas compartan información, usamos los pines RS323 mandando mensajes cortos separados por pipe (|) en donde tenernos el comando seguido de los parámetros. La comunicación si bien es bi-direccional en el sentido de que ambas placas se comparten datos, el proceso es tipo BroadCast ya que no se espera confirmación de recepción. 
 Es importante no cambiar la velocidad de comunicación entre las placas, ya que la codificada es la velocidad nativa, velocidades menores o mayores devendrán en errores.
 
