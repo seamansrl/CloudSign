@@ -70,6 +70,15 @@ Si bien es verdad que podría hacerse todos con solo la ESP32-Cam, vemos que és
 Para que ambas placas compartan información, usamos los pines RS323 mandando mensajes cortos separados por pipe (|) en donde tenernos el comando seguido de los parámetros. La comunicación si bien es bi-direccional en el sentido de que ambas placas se comparten datos, el proceso es tipo BroadCast ya que no se espera confirmación de recepción. 
 Es importante no cambiar la velocidad de comunicación entre las placas, ya que la codificada es la velocidad nativa, velocidades menores o mayores devendrán en errores.
 
+# Servicio Cliente-Servidor
+
+![Configuracion en entorno Arduino](Cliente-Servidor.jpg)
+
+CloudSign trabaja en un esquema denominado FOG en donde parte de los procesos se realizan de forma local y parte de ellos en nube. 
+
+De forma local se realiza un disparo inicial usando Face Detection, Motion Detection o Temperature Detection, cuando alguno de estos gatillos se activan la ESP32-CAM obtiene una imagen de la persona que esta frente a la cámara y la envía al servidor de Proyecto Horus quien será el encargado de analizar la imagen en búsqueda de la coincidencia buscada: Uso de tapabocas, Identificación de rostro, Uso de elementos de seguridad, etc. Si la respuesta es positiva Horus podrá informar sobre el rango horario habilitado para la persona o si esta se encuentra bloqueada por algún motivo como asi también puede devolver una URL a donde se deberá consultar sobre el perfil de acceso del usuario en caso de que se quiera usar un sistema de autenticación externo.
+
+
 # Cargar el codigo en la ESP32-CAM
 
 Para copiar el codigo a la ESP32-Cam se requiere de un adaptador USB-TTL el cual ira conectado de la siguiente manera:
