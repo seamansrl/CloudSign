@@ -28,6 +28,8 @@ También es posible descargar los programas compilados desde https://www.proyect
 - 1x Sensor Ultrasonico Hc-sr04 (Opcional)
 - Cables
 - 2x Pin Hembra Largo Female Long Pin Header 1x8p Paso (Aca se conecta la ESP32-CAM)
+- 1x Resistencia 100K
+- 1x Capacitor ceramico 104
 
 # Primeros pasos
 
@@ -55,6 +57,8 @@ Vamos a ver 5 conjuntos de pines para conexiones exteriores:
 - Rele (3 Pines Negativo, Positivo y Trigger)
 - Pitometro (3 Pines Negativo, Positivo y Señal analógica)
 - Ultrasónico (4 Pines Negativo, Positivo, Trigger y Retorno)
+
+![Configuracion en entorno Arduino](Conexiones.png)
 
 # Comunicación entre placas.
 
