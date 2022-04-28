@@ -31,6 +31,8 @@ También es posible descargar los programas compilados desde https://www.proyect
 - 1x Resistencia 100K
 - 1x Capacitor ceramico 104
 
+![CloudSign](Componentes.png)
+
 # Primeros pasos
 
 Antes de empezar debemos verificar tener todos los componente, incluida nuestra PCB y el programador para la ESP32-Cam (ver Cargar el codigo en la ESP32-CAM).
