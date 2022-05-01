@@ -405,6 +405,20 @@ La configuración del entorno arduino para la carga sera:
 
 Nota: Si hay problemas para subir el codigo a la placa y todo parace corresponder correctamente debera probar invirtiendo el RX y el TX de la placa TTL.
 
+# Configurar una cerradura biométrica TTLock, Sciner y compatibles
+
+Para conectar a CloudSign con TTLock se deberá agregar a la ACCION TRAS ACCESO la siguiente URL en verbo GET:
+https://www.proyectohorus.com.ar/TTLock/unlock.aspx?User=NOMBRE DE USUARIO DE LA APP&Password=CLAVE DE LA APP&LockID=ID DE LA CERRADURA
+
+Donde:
+-  User: Es el mail o teléfono con el que se creo el usuario de la App de TTLock
+- Password: Es la clave del usuario de la App de TTLock
+- LockID: Es el ID de la cerradura a abrir. Este dato está entrando desde la App de TTLock a Configuración >> Esencial >> MAC/ID (Solo el número de ID que esta tras el de la MAC, típicamente un numero de 7 dígitos)
+
+Ejemplo:
+https://www.proyectohorus.com.ar/TTLock/unlock.aspx?User=MI_USUARIO@DOMINIO.COM&Password=1234567&LockID=8837322
+
+
 # Modelo terminado
 
 ![Configuracion en entorno Arduino](Modelo_Terminado.jpg)
