@@ -423,6 +423,8 @@ Ejemplo:
 https://www.proyectohorus.com.ar/TTLock/unlock.aspx?User=MI_USUARIO@DOMINIO.COM&Password=1234567&LockID=8837322
 
 
+Nota: Esta función solo podrá usarse si se posee un Gateway y la cerradura tiene activada la función de apertura remota.
+
 # Modelo terminado
 
 ![Configuracion en entorno Arduino](Modelo_Terminado.jpg)
