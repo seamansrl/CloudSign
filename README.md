@@ -417,7 +417,7 @@ Donde:
 - Password: Es la clave del usuario de la App de TTLock
 - LockID: Es el ID de la cerradura a abrir. Este dato está entrando desde la App de TTLock a Configuración >> Esencial >> MAC/ID (Solo el número de ID que esta tras el de la MAC, típicamente un numero de 7 dígitos)
 
-![Configuracion en entorno Arduino](TTLock_1.png)
+![Configuracion en entorno Arduino](TTLock_2.png)
 
 Ejemplo:
 https://www.proyectohorus.com.ar/TTLock/unlock.aspx?User=MI_USUARIO@DOMINIO.COM&Password=1234567&LockID=8837322
