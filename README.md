@@ -1,6 +1,6 @@
 # PROYECTO HORUS: CloudSign
 
-CloudSign es el sistema de control biométrico para fichado de personal, apertura de puertas o control termino de SeaMan SRL. 
+CloudSign es el sistema de control biométrico para fichado de personal, apertura de puertas o control térmico de SeaMan SRL. 
 
 Pensado para ser de bajo costo y alta prestación, CloudSign está basada en tecnología Open hardware como la Arduino Nano y la ESP32-cam.
 
