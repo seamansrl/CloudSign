@@ -425,6 +425,35 @@ https://www.proyectohorus.com.ar/TTLock/unlock.aspx?User=MI_USUARIO@DOMINIO.COM&
 
 Nota: Esta función solo podrá usarse si se posee un Gateway y la cerradura tiene activada la función de apertura remota.
 
+# Calibración (UPDATE: 2022-05-09)
+
+A partir de esta actualización, CloudSign puede ser calibrado usando una tabla de equivalencias la cual se crea usando un termómetro patrón. Esto en general no se requiere si el pirómetro está bien calibrado, no obstante, esta nueva implementación da lugar a una próxima nueva versión más económica que habilitara el uso de sensores de marca Melexis (Mucho más económicos y simples de conseguir) en remplazo de los Optris (de elevado coste).
+ 
+Para calibrar el sensor se deberá tomar una medida y luego compararla con el termómetro patrón de a saltos de 0,1 grados. 
+
+Hecho esto se conformara un archivo JSON donde los valores del sensor de CloudSign serán las KEY y los valores obtenidos del termómetro patrón los VALUE, quedando algo asi:
+
+‘’json
+{
+  "41.0":"43.0",
+  "40.9":"42.9",
+  "40.8":"42.8",
+  "40.7":"42.7",
+  "40.6":"42.6",
+  "40.5":"42.5",
+  "40.4":"42.4",
+  "40.3":"41.9",
+  "40.2":"41.8",
+  "40.1":"41.7",
+  "40.0":"41.6",
+  "39.9":"41.5",
+  "39.8":"41.4",
+  "39.7":"41.6",
+  "39.6":"41.4",
+  "39.5":"41.3"
+}
+´´
+
 # Modelo terminado
 
 ![Configuracion en entorno Arduino](Modelo_Terminado.jpg)
