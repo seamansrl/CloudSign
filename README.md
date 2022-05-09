@@ -98,8 +98,12 @@ Ejemplo:
 {
 “ssid”: “MI_WiFi”
 }
+```
+
 Password: (Tipo String) Define la clave de la red Wifi.
 Ejemplo:
+
+```json
 {
 “ssid”: “MI_WiFi”,
 “Password”: “MI_Clave”
