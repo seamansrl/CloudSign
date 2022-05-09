@@ -93,6 +93,8 @@ Antes de empezar a enumerar cada parámetro y el tipo de valor este toma, hay qu
 
 
 Ejemplo:
+
+```json
 {
 “ssid”: “MI_WiFi”
 }
@@ -102,7 +104,7 @@ Ejemplo:
 “ssid”: “MI_WiFi”,
 “Password”: “MI_Clave”
 }
-
+```
 
 - api_profile_uuid: (Tipo String) Define el UUID que identifica el 
 perfil de detección dentro de la plataforma on-line (Ver pagina 22).
