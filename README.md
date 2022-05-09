@@ -433,7 +433,7 @@ Para calibrar el sensor se deberá tomar una medida y luego compararla con el te
 
 Hecho esto se conformara un archivo JSON donde los valores del sensor de CloudSign serán las KEY y los valores obtenidos del termómetro patrón los VALUE, quedando algo asi:
 
-‘’json
+```json
 {
   "41.0":"43.0",
   "40.9":"42.9",
@@ -452,7 +452,7 @@ Hecho esto se conformara un archivo JSON donde los valores del sensor de CloudSi
   "39.6":"41.4",
   "39.5":"41.3"
 }
-´´
+```
 
 # Modelo terminado
 
